@@ -13,9 +13,9 @@ Ex: Software as a Service (SaaS) products like Stripe's payment APIs or Twilio's
 
 ## APIs - A Digital Restaurant
 
-![Api-Restraunt](./ALZWDyawVmyZ8W.png)
+![Api-Restraunt](./assets/ALZWDyawVmyZ8W.png)
 
-![Table-img](./image.png)
+![Table-img](./assets/image.png)
 
 ## Types of APIs
 
@@ -40,7 +40,7 @@ Example: Fetching current stock prices from a finance API over the internet.
 
 This course focuses on REST APIs since this is the most widely adopted API architecture.  
 
-You can read more about types of APIs on the [Postman Blog](./A%20guide%20to%20the%20different%20types%20of%20APIs%20_%20Postman%20Blog.pdf).
+You can read more about types of APIs on the [Postman Blog](./assets/A%20guide%20to%20the%20different%20types%20of%20APIs%20_%20Postman%20Blog.pdf).
 
 ### REST APIs
 Some traits of REST APIs include not storing session state between requests, the ability to cache, and the ability to send and receive various data types.
@@ -71,14 +71,14 @@ curl https://api.github.com/users/postmanlabs
 ```
 This is an example of what an API call in the terminal using the curl command looks like. Here we are fetching data about GitHub user postmanlabs.
 
-![curl-img](./image%20copy.png)
+![curl-img](./assets/image%20copy.png)
 
 It works great, but once you make the call, the API response data is lost in the river of the terminal.
 
 #### API calls with Postman
 Postman shows the response with clean indents and colors and allows you to save, organize and share your requests. You can also see all the components of the request and response broken down into tabs and other helpful details like the response time and status code. 
 
-![p-sample](./instructor.png)
+![p-sample](./assets/instructor.png)
 
 # Getting Started with Postman (Installation-Set up)
 
@@ -106,27 +106,27 @@ Be sure to hit Save your work using Ctrl Key
 ## Request methods
 When we make an HTTP call to a server, we specify a request method that indicates the type of operation we are about to perform. These are also called HTTP verbs.
 
-![Request-methods](./image%20copy%202.png)
+![Request-methods](./assets/image%20copy%202.png)
 
-Refer to the API Documentation here: [Postman Library API v2 docs](./Postman%20Library%20API%20v2%20docs.pdf)
+Refer to the API Documentation here: [Postman Library API v2 docs](./assets/Postman%20Library%20API%20v2%20docs.pdf)
 
 ## Request URL
 In addition to a request method, a request must include a request URL that indicates where to make the API call. A request URL has three parts: a protocol (such as http:// or https://), host (location of the server), and path (route on the server). In REST APIs, the path often points to a reference entity, like "books".  
 Paths and complete URLs are also sometimes called API endpoints.
 
-![Request-URL](./image%20copy%203.png)
+![Request-URL](./assets/image%20copy%203.png)
 
 ## Response status codes
 The Postman Library API v2 has returned a response status code of "200 OK". Status codes are indicators of whether a request failed or succeeded.  
 
 Status codes have conventions. For example, any status code starting with a "2xx" (a "200-level response") represents a successful call. Get familiar with other status code categories:
 
-![Response-status-codes](./image%20copy%204.png)
+![Response-status-codes](./assets/image%20copy%204.png)
 
 ##  Request-Response pattern 
 An API is the interface that lets us know what kind of response to expect when we make certain calls to a server. 
 
-![req-res](./image%20copy%205.png)
+![req-res](./assets/image%20copy%205.png)
 
 The client is the agent making a request. A client could be a browser or an application you have coded, for example. In our case Postman is the client because that's how we sent the request.  
 
@@ -178,7 +178,7 @@ Notice how Postman syncs the request URL in real time, adding the question mark 
 
 You should get a 200 OK response with an array of book objects - but only books with the fiction genre!
 
-![query-params](./image%20copy%206.png)
+![query-params](./assets/image%20copy%206.png)
 
 ##  Task: Multiple query parameters 
 Let's add a second query parameter to GET /books only to list books where the checkedOut property is false.
@@ -188,7 +188,7 @@ Let's add a second query parameter to GET /books only to list books where the ch
 
 You should get a 200 OK response with an array of only fiction books that are not checked out or an empty array [] if there are no fiction books available.
 
-![multiple-query-params](./image%20copy%207.png)
+![multiple-query-params](./assets/image%20copy%207.png)
 
 ##  Path Variable
 A **path variable** (a.k.a. "path parameters") is a dynamic section of a path and is often used for IDs and entity names such as usernames.  
@@ -218,7 +218,7 @@ GET https://api.github.com/repos/postmanlabs/newman
 
 ### Path vs. query parameters
 
-![path vs. query](./image%20copy%208.png)
+![path vs. query](./assets/image%20copy%208.png)
 
 ##  Task: Get a book by id
 If a person keeps asking about the book "Ficciones" by Jorge Luis Borges, you've jotted down that the unique id of this book is **29cd820f-82f9-4b45-a7f4-0924111b5b89**.  
@@ -235,7 +235,7 @@ We can get a specific book by hitting the path GET /books/:id, where we replace 
 3. In the Params tab of the request, paste the id for "Ficciones" (29cd820f-82f9-4b45-a7f4-0924111b5b89) as the value for the path variable named id. Make sure not to add any whitespace around the id value.
 4. Save and Send your request. You should get a 200 OK response with a single JSON object that represents the "Ficciones" book.
 
-![get-book-by-id](./image%20copy%209.png)
+![get-book-by-id](./assets/image%20copy%209.png)
 
 ### Debugging requests in the Postman Console
 
@@ -243,7 +243,7 @@ You used Postman's path variable helper in the Params tab of the request to add 
 
 You can always view the raw request sent to the API by opening the Postman Console in the lower left of Postman.
 
-![postman-debug-console](./image%20copy%2010.png)
+![postman-debug-console](./assets/image%20copy%2010.png)
 
 # Sending data with POST
 
@@ -272,7 +272,7 @@ You can copy this object and replace the values with details about your book!
 ```
 5.  Save and Send your request.  
 
-![add-book-error](./image%20copy%2011.png)
+![add-book-error](./assets/image%20copy%2011.png)
 
 😱 Uh-oh!  
 The response from the server came back with a status **401 Unauthorized**. Remember that 400-level errors are **client errors**, meaning we made a mistake in our request.  
@@ -302,7 +302,7 @@ Headers are how we can add metadata about our requests, such as authorization in
 🚀 Success!  
 Your book was added! Now that your request is properly authorized in the header, you should get a 201 Created response with a response body that is an object representing your newly added book!
 
-![add-book-apikey](./image%20copy%2012.png)
+![add-book-apikey](./assets/image%20copy%2012.png)
 
 You can now return to your "get books by id" request, and in the path parameter id replace it with the value of the id you received in the body of the book you added.
 
@@ -316,7 +316,7 @@ There is an easier way to add Auth in Postman... let's find out next 👀
 4. Enter the API Key details in the fields below. Key: api-key, Value: postmanrulz, Add to: Header
 5. Save the changes to your collection by clicking the floppy disk icon in the upper right (important!)
 
-![Postman-oAuth](./image%20copy%2013.png)
+![Postman-oAuth](./assets/image%20copy%2013.png)
 
 #### Add a new book
 1. Go back to your "add a book" request and add another book by changing the body in the Body tab
@@ -324,7 +324,7 @@ There is an easier way to add Auth in Postman... let's find out next 👀
 3. Save your request and hit Send!
 4. Open up the Postman Console in the lower left, and you'll see that the API Key has been added as a header api-key: postmanrulz, which is why we were authorized to add a book!
 
-![Auth-type-console](./image%20copy%2014.png)
+![Auth-type-console](./assets/image%20copy%2014.png)
 
 # Introduction to variables and scripting
 
@@ -336,7 +336,7 @@ Postman allows you to save values as variables so that you can:
 ### Variable scopes
 From broadest to narrowest, these scopes are global, collection, environment, data, and local.
 
-![variable-scope](./image%20copy%2015.png)
+![variable-scope](./assets/image%20copy%2015.png)
 
 The preference of the local variable is more than the global variable.  
 In this course we will deal with the collection variables, which live at the collection level and can be accessed anywhere inside the collection.
@@ -371,14 +371,14 @@ In addition to getting variables, you can also set them with pm.collectionVariab
 console.log(pm.response.json())
 ```
 
-![postman-request-scripts](./image%20copy%2016.png)
+![postman-request-scripts](./assets/image%20copy%2016.png)
 
 4. Save your request
 5. Send your request. This will trigger the script in the Post-response script tab to run after the response comes back from the API
 6. Open the Postman Console in the lower left of the window.
 7. Scroll to the bottom of the logs in the console. You will see your most recent request POST https://library-api.poistmanlabs.com/books
 
-![script-console](./image%20copy%2017.png)
+![script-console](./assets/image%20copy%2017.png)
 
 ##  Task: Grab the new book id 
 1. In the Body tab of the "add a book" request, change the book's details to add a new book!
@@ -390,7 +390,7 @@ const id = pm.response.json().id
 pm.collectionVariables.set("id", id)
 ```
 
-![script](./image%20copy%2018.png)
+![script](./assets/image%20copy%2018.png)
 
 3. Save and send your request.  
 When the 201 the response comes back from the API with your newly created book, and the test script will run and save the book's id as a collection variable automatically.
@@ -398,7 +398,7 @@ When the 201 the response comes back from the API with your newly created book, 
 4. View your collection variables by clicking on your Postman Library API v2 collection, then the Variables tab.  
 The id variable has been automatically assigned the id of your new book as its Current Value!
 
-![set-id](./image%20copy%2019.png)
+![set-id](./assets/image%20copy%2019.png)
 
 You can now use **{{id}}** anywhere in your collection to access this value!
 
@@ -420,7 +420,7 @@ Click View more actions on your collection  > Share > Via API > Generate New Key
 5. Send the Halfway Test  request 📩
 6. Check the Test Results tab in the response. If you followed the course properly and passed all the Tests, you should see Test Results (16/16) 
 
-![Halftest-passed](./image%20copy%2020.png)
+![Halftest-passed](./assets/image%20copy%2020.png)
 
 # PATCH and DELETE
 
@@ -430,7 +430,7 @@ Click View more actions on your collection  > Share > Via API > Generate New Key
 3. Set the request URL to {{baseUrl}}/books/:id
 4. Set the value of the path variable id to {{id}}
 
-![checkout-book](./image%20copy%2021.png)
+![checkout-book](./assets/image%20copy%2021.png)
 
 5. Add a raw JSON body in the Body tab to update the checkedOut property to true: 
 ```json
@@ -442,7 +442,7 @@ Click View more actions on your collection  > Share > Via API > Generate New Key
 
 You should get a 200 OK response that shows the updated data about your book. Notice how checkedOut is now true
 
-![PATCH 200 OK](./image%20copy%2022.png)
+![PATCH 200 OK](./assets/image%20copy%2022.png)
 
 ##  Task: Delete your book 
 1. Hover on your Postman Library API v2 collection, click the three dots, and select "Add request", name your new request "delete a book"
@@ -453,7 +453,7 @@ You should get a 200 OK response that shows the updated data about your book. No
 
 You should get a 204 No Content response from the API. This means the server successfully deleted the book, and won't send any response body back.
 
-![delete-book 204](./image%20copy%2023.png)
+![delete-book 204](./assets/image%20copy%2023.png)
 
 Try sending your request again. Since you are sending a request to delete a book with an id that no longer exists, you get a 404 error! 
 
@@ -474,7 +474,7 @@ curl --location 'https://library-api.postmanlabs.com/books/e9211cf1-1ebb-4aa5-8f
 
 If we copy this snippet into the terminal and press Enter, we make the API call and the response body is printed:
 
-![cURL-response](./image%20copy%2024.png)
+![cURL-response](./assets/image%20copy%2024.png)
 
 #  Submit your Postman collection 
 1. Click on the submit request in your "Collection Test" collection.
@@ -492,6 +492,6 @@ Copy this custom body for you and paste it into the body editor:
 ```
 4. Save and Send your submit request 💾.
 
-![submit-postman](./image%20copy%2025.png)
+![submit-postman](./assets/image%20copy%2025.png)
 
 If your collection passes all the tests, you will get a success message, and this lesson will be marked complete automatically 🎉
